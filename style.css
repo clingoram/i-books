@@ -46,14 +46,17 @@ input:-webkit-autofill {
     float:left;
     height:230px;
 }
-
 .title{   
     font-size:22px;    
     text-transform:capitalize;
     display:block;
 }
 .cover{
-
+    position:relative;
+    left:680px;
+    bottom:190px;
+    width:10px;
+    height:10px;
 }
 .author{
 
@@ -76,6 +79,8 @@ input:-webkit-autofill {
     right:20px;
     color:#000;
     border-bottom:1px dotted #ded8d8;
+    background:#fff;
+    opacity:0.7;
 }
 
 
