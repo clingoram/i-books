@@ -5,8 +5,7 @@ $(function() {
 
         var keyword = document.getElementById('search').value;
         document.getElementById('result').innerHTML = "";
-        
-        
+            
        $.ajax({
            url: 'https://www.googleapis.com/books/v1/volumes?q=' + keyword, //google books
             dataType:'json',
@@ -17,7 +16,7 @@ $(function() {
                     result.innerHTML += "<div class='title'>" + data.items[i].volumeInfo.title + "</div>" + "Authors:" + "<div class='author'>" + data.items[i].volumeInfo.authors + "</div>" + "Publisher:" + "<div class='publisher'>" + data.items[i].volumeInfo.publisher + "<div> " + "<div class='cover'>" + '<img src="' + data.items[i].volumeInfo.imageLinks.thumbnail + '"/>' + "</div>"+ "<div class='desrc'>" + data.items[i].volumeInfo.description + "</div>";
                     },
                     error: function (e) {
-                        console.log("Oops!Can't find data....")
+                        console.log("Oops!Can't find the data....")
                     }
                 })
     };
