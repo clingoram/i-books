@@ -13,7 +13,11 @@ $(function() {
             success: function (data) {
                 console.log("You're looking for" +" "+ keyword);
                 for (i = 0; i < data.items.length; i++) {
-                    result.innerHTML += "<div class='title'>" + data.items[i].volumeInfo.title + "</div>" + "Authors:" + "<div class='author'>" + data.items[i].volumeInfo.authors + "</div>" + "Publisher:" + "<div class='publisher'>" + data.items[i].volumeInfo.publisher + "<div> " + "<div class='cover'>" + '<img src="' + data.items[i].volumeInfo.imageLinks.thumbnail + '"/>' + "</div>"+ "<div class='desrc'>" + data.items[i].volumeInfo.description + "</div>";
+                    result.innerHTML += "<div class='title'>" + data.items[i].volumeInfo.title + "</div>" + 
+                        "Authors:" + "<div class='author'>" + data.items[i].volumeInfo.authors + "</div>" + 
+                        "Publisher:" + "<div class='publisher'>" + data.items[i].volumeInfo.publisher + "</div> " + 
+                        "<div class='cover'>" + '<img src="' + data.items[i].volumeInfo.imageLinks.thumbnail + '"/>' + 
+                        "</div>"+ "<div class='desrc'>" + data.items[i].volumeInfo.description + "</div>";
                     },
                     error: function (e) {
                         console.log("Oops!Can't find the data....")
