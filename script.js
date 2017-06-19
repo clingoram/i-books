@@ -18,11 +18,12 @@ $(function() {
                         "Publisher:" + "<div class='publisher'>" + data.items[i].volumeInfo.publisher + "</div> " + 
                         "<div class='cover'>" + '<img src="' + data.items[i].volumeInfo.imageLinks.thumbnail + '"/>' + 
                         "</div>"+ "<div class='desrc'>" + data.items[i].volumeInfo.description + "</div>";
-                    },
-                    error: function (e) {
-                        console.log("Oops!Can't find the data....")
-                    }
-                })
-    };
+                       }
+                },
+             error: function (data) {
+                  console.log("Oops!Can't find the data....")
+               }
+            });
+        }
     document.getElementById('button').addEventListener('click', bookSearch, false);
 });
